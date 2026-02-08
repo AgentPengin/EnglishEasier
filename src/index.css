@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Flashcard flip animation */
+.flashcard-container {
+  perspective: 1000px;
+}
+
+.flashcard {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Button hover effects */
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-xl 
+         hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 
+         shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-white/20 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl 
+         hover:bg-white/30 transform hover:scale-105 transition-all duration-300 
+         border border-white/30;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-2xl shadow-xl p-6 transform hover:scale-[1.02] transition-all duration-300;
+}
+
+/* Input styles */
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 
+         focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300;
+}
+
+/* Ranking badges */
+.badge-bronze {
+  background: linear-gradient(135deg, #cd7f32, #8b4513);
+}
+
+.badge-silver {
+  background: linear-gradient(135deg, #c0c0c0, #808080);
+}
+
+.badge-gold {
+  background: linear-gradient(135deg, #ffd700, #ffb800);
+}
+
+.badge-platinum {
+  background: linear-gradient(135deg, #e5e4e2, #a8a9ad);
+}
+
+.badge-diamond {
+  background: linear-gradient(135deg, #b9f2ff, #89cff0);
+}

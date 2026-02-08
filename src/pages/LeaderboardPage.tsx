@@ -8,10 +8,7 @@ import {
   Trophy,
   Medal,
   Crown,
-  Star,
-  TrendingUp,
   Calendar,
-  Users,
 } from 'lucide-react';
 
 // Mock leaderboard data for demo
@@ -158,7 +155,7 @@ export default function LeaderboardPage() {
           Các cấp bậc
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {RANKS.map((r, index) => (
+          {RANKS.map((r) => (
             <div
               key={r.name}
               className={`p-3 rounded-xl text-center transition-all ${

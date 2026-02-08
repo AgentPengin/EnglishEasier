@@ -6,11 +6,9 @@ import { usePomodoroStore } from '../stores/pomodoroStore';
 import { getRankByPoints, getProgressToNextRank, calculateLevel, formatDate } from '../utils/helpers';
 import { ACHIEVEMENTS } from '../utils/constants';
 import {
-  User,
   Mail,
   Calendar,
   Star,
-  Trophy,
   BookOpen,
   Flame,
   Target,
